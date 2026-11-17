@@ -1,0 +1,17 @@
+#:schema ./schema.sql
+
+name = "wthdwt-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# API only; the static site stays on the existing project
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wthdwt"
+database_id = "cc772f5f-6b8d-4814-a4f2-a3e1bedd4c51"
+
+[vars]
+# comma-separated front-end origins allowed to call this API
+ALLOWED_ORIGINS = "https://wthdwt-home.pages.dev,https://wthdwt.cc.cd"
